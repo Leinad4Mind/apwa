@@ -1,7 +1,8 @@
 <?php
+
 /**
 *
-* @package PM WELCOME
+* @package PM Welcome
 * @copyright BB3.MOBi (c) 2015 Anvar http://apwa.ru
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
