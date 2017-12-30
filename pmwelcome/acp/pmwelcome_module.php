@@ -3,7 +3,7 @@
 /**
 *
 * @package PM Welcome
-* @copyright BB3.MOBi (c) 2015 Anvar http://apwa.ru
+* @copyright BB3.Mobi 2015 (c) Anvar(http://apwa.ru)
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */
@@ -18,7 +18,7 @@ class pmwelcome_module
 	function main($id, $mode)
 	{
 		global $config, $user, $template, $request, $phpbb_container;
-		global $phpbb_root_path, $phpEx;
+		global $root_path, $phpEx;
 
 		$this->user = $user;
 		$this->tpl_name = 'acp_pmwelcome';
@@ -36,7 +36,7 @@ class pmwelcome_module
 		if (!$submit)
 		{
 			$user_info = $this->pm_welcome_user_name($config['pmwelcome_user']);
-			$user_name = '<a href="' . append_sid("{$phpbb_root_path}memberlist.$phpEx", 'mode=viewprofile&amp;u=' . $user_info['user_id']) . '">' . $user_info['username'] . '</a>';
+			$user_name = '<a href="' . append_sid("{$root_path}memberlist.$phpEx", 'mode=viewprofile&amp;u=' . $user_info['user_id']) . '">' . $user_info['username'] . '</a>';
 		}
 
 		$display_vars = array(
