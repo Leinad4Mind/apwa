@@ -1,7 +1,8 @@
 <?php
+
 /**
 *
-* @package PM WELCOME
+* @package PM Welcome
 * @copyright BB3.MOBi (c) 2015 Anvar http://apwa.ru
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
@@ -26,7 +27,7 @@ class v_1_0_0 extends \phpbb\db\migration\migration
 		return array(
 			// Add configs
 			array('config.add', array('pmwelcome_user', 2)),
-			array('config.add', array('pmwelcome_subject', 'Welcome to apwa.ru!')),
+			array('config.add', array('pmwelcome_subject', 'Welcome to "Your Forum"!')),
 
 			// Add config text
 			array('config_text.add', array('pmwelcome_post_text', '')),
