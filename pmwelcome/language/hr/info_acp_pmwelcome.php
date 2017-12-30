@@ -46,5 +46,5 @@ $lang = array_merge($lang, array(
 'ACP_PMWELCOME_USER_EXPLAIN'=>'ID korisnika/ce foruma u ime kojeg/e će poruka biti poslana.',
 'ACP_PMWELCOME_SUBJECT'=>'Naslov',
 'ACP_PMWELCOME_TEXT'=>'Tekst',
-'ACP_PMWELCOME_TEXT_EXPLAIN'=>'Možeš koristiti BBKod, smajliće i token "{USERNAME}, {USER_EMAIL}, {SITE_NAME}, {SITE_DESC}, {BOARD_CONTACT}, {BOARD_EMAIL} and {BOARD_SIG}".',
+'ACP_PMWELCOME_TEXT_EXPLAIN'=>'Možeš koristiti BBKod, smajliće i token "{USERNAME}, {USER_EMAIL}, {SITE_NAME}, {SITE_DESC}, {BOARD_CONTACT}, {BOARD_EMAIL} i {BOARD_SIG}".',
 ));
