@@ -2,7 +2,7 @@ services:
     apwa.attachcount.listener:
         class: apwa\attachcount\event\listener
         arguments:
-            - @config
-            - @template
+            - '@config'
+            - '@template'
         tags:
             - { name: event.listener }

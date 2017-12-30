@@ -1,15 +1,18 @@
 <?php
+
 /**
 *
 * @package Attachments Counter
-* @copyright BB3.MOBi (c) 2015 Anvar http://apwa.ru
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright BB3.Mobi 2015 (c) Anvar(http://apwa.ru)
+* @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */
 
 namespace apwa\attachcount\event;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use phpbb\config\config;
+use phpbb\template\template;
 
 class listener implements EventSubscriberInterface
 {
@@ -20,10 +23,13 @@ class listener implements EventSubscriberInterface
 	/** @var \phpbb\template\template */
 	protected $template;
 
-	public function __construct(\phpbb\config\config $config, \phpbb\template\template $template)
+	public function __construct(
+		config $config, 
+		template $template
+	)
 	{
-		$this->config = $config;
-		$this->template = $template;
+		$this->config	 = $config;
+		$this->template	 = $template;
 	}
 
 	static public function getSubscribedEvents()
