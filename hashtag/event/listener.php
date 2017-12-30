@@ -1,4 +1,5 @@
 <?php
+
 /**
 *
 * @package phpBB3.1 hashtag v 1.0.0
@@ -13,15 +14,15 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class listener implements EventSubscriberInterface
 {
-	/** @var string phpbb_root_path */
-	protected $phpbb_root_path;
+	/** @var string root_path */
+	protected $root_path;
 
 	/** @var string phpEx */
 	protected $php_ext;
 
-	public function __construct($phpbb_root_path, $php_ext)
+	public function __construct($root_path, $php_ext)
 	{
-		$this->phpbb_root_path = $phpbb_root_path;
+		$this->root_path = $root_path;
 		$this->php_ext = $php_ext;
 	}
 
@@ -46,6 +47,6 @@ class listener implements EventSubscriberInterface
 		{
 			return $match[0];
 		}
-		return $match[1] . '<a href="' . append_sid("{$this->phpbb_root_path}search.$this->php_ext", 'keywords=' . $match[2]) . '">#' . $match[2] . '</a>';
+		return $match[1] . '<a href="' . append_sid("{$this->root_path}search.$this->php_ext", 'keywords=' . $match[2]) . '">#' . $match[2] . '</a>';
 	}
 }
