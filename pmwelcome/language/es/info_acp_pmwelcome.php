@@ -46,5 +46,5 @@ $lang = array_merge($lang, array(
 	'ACP_PMWELCOME_USER_EXPLAIN'	=> 'El id del usuario del foro quien enviara el mensaje privado.',
 	'ACP_PMWELCOME_SUBJECT'			=> 'Asunto',
 	'ACP_PMWELCOME_TEXT'			=> 'Texto del mensaje de bienvenida',
-	'ACP_PMWELCOME_TEXT_EXPLAIN'	=> 'Usted puede usar bbcode y emoticonos, y la marca clave { USERNAME } para reemplazar el nombre del usuario que recibe un mensaje privado.',
+	'ACP_PMWELCOME_TEXT_EXPLAIN'	=> 'Usted puede usar bbcode y emoticonos, y las marcas claves "{USERNAME}, {USER_EMAIL}, {SITE_NAME}, {SITE_DESC}, {BOARD_CONTACT}, {BOARD_EMAIL} y {BOARD_SIG}".',
 ));

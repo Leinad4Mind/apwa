@@ -46,5 +46,5 @@ $lang = array_merge($lang, array(
 	'ACP_PMWELCOME_USER_EXPLAIN'	=> 'اكتب رقم العضوية للعضو الذي تريد أن يكون مُرسل رسالة الترحيب.',
 	'ACP_PMWELCOME_SUBJECT'			=> 'عنوان الموضوع ',
 	'ACP_PMWELCOME_TEXT'			=> 'نص رسالة الترحيب',
-	'ACP_PMWELCOME_TEXT_EXPLAIN'	=> 'تستطيع استخدام أكواد البي بي bbcode والإبتسامات , وكذلك تستطيع استخدام الرمز {USERNAME} بدلاً من كتابة إسم المستخدم الذي سيستقبل رسالة الترحيب.',
+	'ACP_PMWELCOME_TEXT_EXPLAIN'	=> 'تستطيع استخدام أكواد البي بي bbcode والإبتسامات , وكذلك تستطيع استخدام الرمز "{USERNAME}, {USER_EMAIL}, {SITE_NAME}, {SITE_DESC}, {BOARD_CONTACT}, {BOARD_EMAIL} و {BOARD_SIG}".',
 ));

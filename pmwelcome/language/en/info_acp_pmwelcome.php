@@ -45,5 +45,5 @@ $lang = array_merge($lang, array(
 	'ACP_PMWELCOME_USER_EXPLAIN'	=> 'id User Forum, on behalf of which will be sent to a private message.',
 	'ACP_PMWELCOME_SUBJECT'			=> 'Post subject',
 	'ACP_PMWELCOME_TEXT'			=> 'Text of the greeting message',
-	'ACP_PMWELCOME_TEXT_EXPLAIN'	=> 'You can use bbcode and smilies, and the token {USERNAME} to replace the name of the user who receive a private message.',
+	'ACP_PMWELCOME_TEXT_EXPLAIN'	=> 'You can use bbcode and smilies, and this tokens "{USERNAME}, {USER_EMAIL}, {SITE_NAME}, {SITE_DESC}, {BOARD_CONTACT}, {BOARD_EMAIL} and {BOARD_SIG}".'
 ));

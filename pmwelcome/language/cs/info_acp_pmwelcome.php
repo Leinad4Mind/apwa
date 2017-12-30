@@ -46,5 +46,5 @@ $lang = array_merge($lang, array(
 	'ACP_PMWELCOME_USER_EXPLAIN'	=> 'ID uživatele fóra, jehož jménem bude soukromá zpráva zaslána.',
 	'ACP_PMWELCOME_SUBJECT'			=> 'Předmět',
 	'ACP_PMWELCOME_TEXT'			=> 'Text uvítací zprávy',
-	'ACP_PMWELCOME_TEXT_EXPLAIN'	=> 'Můžete používat BBCode, smajlíky a proměnnou {USERNAME}, která bude nahrazena jménem příjemce soukromé zprávy.',
+	'ACP_PMWELCOME_TEXT_EXPLAIN'	=> 'Můžete používat BBCode, smajlíky a proměnnou "{USERNAME}, {USER_EMAIL}, {SITE_NAME}, {SITE_DESC}, {BOARD_CONTACT}, {BOARD_EMAIL} a {BOARD_SIG}".',
 ));

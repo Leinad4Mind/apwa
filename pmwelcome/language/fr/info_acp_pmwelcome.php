@@ -46,5 +46,5 @@ $lang = array_merge($lang, array(
 	'ACP_PMWELCOME_USER_EXPLAIN'	=> 'Saisir l’ID d’un utilisateur du forum, à partir duquel le message privé de bienvenue sera envoyé.',
 	'ACP_PMWELCOME_SUBJECT'			=> 'Sujet',
 	'ACP_PMWELCOME_TEXT'			=> 'Texte',
-	'ACP_PMWELCOME_TEXT_EXPLAIN'	=> 'Permet de saisir le texte du message privé de bienvenue.<br />Les BBCodes et les smileys sont autorisés.<br />La clé : « {USERNAME} » permet de remplacer le nom d’utilisateur du destinataire du message privé de bienvenue.',
+	'ACP_PMWELCOME_TEXT_EXPLAIN'	=> 'Permet de saisir le texte du message privé de bienvenue.<br />Les BBCodes et les smileys sont autorisés.<br />Les clés : « {USERNAME}, {USER_EMAIL}, {SITE_NAME}, {SITE_DESC}, {BOARD_CONTACT}, {BOARD_EMAIL} et {BOARD_SIG} » aussi.',
 ));

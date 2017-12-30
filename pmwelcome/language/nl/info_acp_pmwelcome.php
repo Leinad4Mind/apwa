@@ -46,5 +46,5 @@ $lang = array_merge($lang, array(
 	'ACP_PMWELCOME_USER_EXPLAIN'	=> 'ID gebruiker, namens wie het welkoms bericht wordt verstuurd.',
 	'ACP_PMWELCOME_SUBJECT'			=> 'Onderwerp',
 	'ACP_PMWELCOME_TEXT'			=> 'Tekst voor het welkoms bericht',
-	'ACP_PMWELCOME_TEXT_EXPLAIN'	=> 'Je kan BBcodes en smilies gebruiken, maar ook de variabel {USERNAME} hiermee wordt de gebruikersnaam van de ontvanger gebruikt.',
+	'ACP_PMWELCOME_TEXT_EXPLAIN'	=> 'Je kan BBcodes en smilies gebruiken, maar ook de variabel "{USERNAME}, {USER_EMAIL}, {SITE_NAME}, {SITE_DESC}, {BOARD_CONTACT}, {BOARD_EMAIL} en {BOARD_SIG}".',
 ));

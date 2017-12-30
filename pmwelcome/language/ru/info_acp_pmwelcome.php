@@ -45,5 +45,5 @@ $lang = array_merge($lang, array(
 	'ACP_PMWELCOME_USER_EXPLAIN'	=> 'id пользователя форума, от имени которого будет отправлено личное сообщение.',
 	'ACP_PMWELCOME_SUBJECT'			=> 'Заголовок сообщения',
 	'ACP_PMWELCOME_TEXT'			=> 'Текст приветственного сообщения',
-	'ACP_PMWELCOME_TEXT_EXPLAIN'	=> 'Вы можете использовать bbcode и смайлы, а также лексему {USERNAME} для замены на имя пользователя которому будет отправлено личное сообщение.',
+	'ACP_PMWELCOME_TEXT_EXPLAIN'	=> 'Вы можете использовать bbcode и смайлы, а также лексему "{USERNAME}, {USER_EMAIL}, {SITE_NAME}, {SITE_DESC}, {BOARD_CONTACT}, {BOARD_EMAIL} и {BOARD_SIG}".',
 ));

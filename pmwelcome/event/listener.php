@@ -65,8 +65,14 @@ class listener implements EventSubscriberInterface
 			if ($pwm_user && $pwm_subject && $pwm_text)
 			{
 				$user_to = array(
-					'user_id'	=> $event['user_id'],
-					'username'	=> $user_row['username'],
+					'user_id'			=> $event['user_id'],
+					'username'			=> $user_row['username'],
+					'user_email'		=> $user_row['user_email'],
+					'sitename'			=> $this->config['sitename'],
+					'site_desc'			=> $this->config['site_desc'],
+					'board_contact'		=> $this->config['board_contact'],
+					'board_email'		=> $this->config['board_email'],
+					'board_email_sig'	=> $this->config['board_email_sig'],
 				);
 
 				$this->user_welcome($user_to, $pwm_user, $pwm_subject, $pwm_text);
@@ -85,8 +91,14 @@ class listener implements EventSubscriberInterface
 			if ($pwm_user && $pwm_subject && $pwm_text)
 			{
 				$user_to = array(
-					'user_id'	=> $user_row['user_id'],
-					'username'	=> $user_row['username'],
+					'user_id'			=> $user_row['user_id'],
+					'username'			=> $user_row['username'],
+					'user_email'		=> $user_row['user_email'],
+					'sitename'			=> $this->config['sitename'],
+					'site_desc'			=> $this->config['site_desc'],
+					'board_contact'		=> $this->config['board_contact'],
+					'board_email'		=> $this->config['board_email'],
+					'board_email_sig'	=> $this->config['board_email_sig'],
 				);
 
 				$this->user_welcome($user_to, $pwm_user, $pwm_subject, $pwm_text);
@@ -101,7 +113,13 @@ class listener implements EventSubscriberInterface
 		$uid = $bitfield = '';
 		$allow_bbcode = $allow_urls = $allow_smilies = true;
 
-		$text = str_replace('{USERNAME}', $user_to['username'], $text);
+		$text = str_replace('{USERNAME}', 		$user_to['username'],		 $text);
+		$text = str_replace('{USER_EMAIL}',		$user_to['user_email'],		 $text);
+		$text = str_replace('{SITE_NAME}',		$user_to['sitename'],		 $text);
+		$text = str_replace('{SITE_DESC}',		$user_to['site_desc'],		 $text);
+		$text = str_replace('{BOARD_CONTACT}',	$user_to['board_contact'],	 $text);
+		$text = str_replace('{BOARD_EMAIL}',	$user_to['board_email'],	 $text);
+		$text = str_replace('{BOARD_SIG}',		$user_to['board_email_sig'], $text);
 
 		generate_text_for_storage($text, $uid, $bitfield, $m_flags, $allow_bbcode, $allow_urls, $allow_smilies);
 
