@@ -26,8 +26,8 @@ class listener implements EventSubscriberInterface
 	/** @var \phpbb\config\db_text */
 	protected $config_text;
 
-	/** @var string phpbb_root_path */
-	protected $phpbb_root_path;
+	/** @var string root_path */
+	protected $root_path;
 
 	/** @var string phpEx */
 	protected $php_ext;
@@ -36,13 +36,13 @@ class listener implements EventSubscriberInterface
 		user $user,
 		config $config,
 		db_text $config_text,
-		$phpbb_root_path, $php_ext
+		$root_path, $php_ext
 	)
 	{
 		$this->user				= $user;
 		$this->config			= $config;
 		$this->text				= $config_text;
-		$this->phpbb_root_path	= $phpbb_root_path;
+		$this->root_path		= $root_path;
 		$this->php_ext			= $php_ext;
 	}
 
@@ -105,7 +105,7 @@ class listener implements EventSubscriberInterface
 
 		generate_text_for_storage($text, $uid, $bitfield, $m_flags, $allow_bbcode, $allow_urls, $allow_smilies);
 
-		include_once($this->phpbb_root_path . 'includes/functions_privmsgs.' . $this->php_ext);
+		include_once($this->root_path . 'includes/functions_privmsgs.' . $this->php_ext);
 
 		$pm_data = array(
 			'address_list'		=> array('u' => array($user_to['user_id'] => 'to')),
