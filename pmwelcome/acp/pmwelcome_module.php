@@ -43,9 +43,9 @@ class pmwelcome_module
 			'title'	=> 'ACP_PMWELCOME',
 			'vars'	=> array(
 				'legend1'	=> 'ACP_PMWELCOME_SETTINGS',
-				'pmwelcome_user'		=> array('lang' => 'ACP_PMWELCOME_USER',	'validate' => 'int:2:255',	'type' => 'number:2:255', 'explain' => true, 'append' => ' ' . $user_name),
-				'pmwelcome_subject'		=> array('lang' => 'ACP_PMWELCOME_SUBJECT',	'validate' => 'string',		'type' => 'text:50:250', 'explain' => false),
-				'pmwelcome_post_text'	=> array('lang' => 'ACP_PMWELCOME_TEXT',	'validate' => '',			'type' => 'textarea:15:30', 'explain' => true),
+				'pmwelcome_user'		=> array('lang' => 'ACP_PMWELCOME_USER',	'validate' => 'int:2:999999',	'type' => 'number:2:999999', 'explain' => true, 'append' => ' ' . $user_name),
+				'pmwelcome_subject'		=> array('lang' => 'ACP_PMWELCOME_SUBJECT',	'validate' => 'string',		'type' => 'text:20:250', 'explain' => false),
+				'pmwelcome_post_text'	=> array('lang' => 'ACP_PMWELCOME_TEXT',	'validate' => '',			'type' => 'textarea:5:30', 'explain' => true),
 
 				'legend2'	=> 'ACP_SUBMIT_CHANGES',
 			),
