@@ -1,15 +1,20 @@
 <?php
+
 /**
 *
 * @package Ad Units
-* @copyright BB3.MOBi (c) 2015 Anvar http://apwa.ru
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @copyright BB3.Mobi 2015 (c) Anvar(http://apwa.ru)
+* @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */
 
 namespace apwa\adunits\event;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use phpbb\user;
+use phpbb\config\config;
+use phpbb\config\db_text;
+use phpbb\template\template;
 
 class listener implements EventSubscriberInterface
 {
@@ -26,12 +31,17 @@ class listener implements EventSubscriberInterface
 	protected $template;
 
 
-	public function __construct(\phpbb\user $user, \phpbb\config\config $config, \phpbb\config\db_text $config_text, \phpbb\template\template $template)
+	public function __construct(
+		user $user, 
+		config $config, 
+		db_text $config_text, 
+		template $template
+	)
 	{
-		$this->user = $user;
-		$this->config = $config;
-		$this->text = $config_text;
-		$this->template = $template;
+		$this->user		 = $user;
+		$this->config	 = $config;
+		$this->text		 = $config_text;
+		$this->template	 = $template;
 	}
 
 	static public function getSubscribedEvents()
