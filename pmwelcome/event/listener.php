@@ -1,8 +1,9 @@
 <?php
+
 /**
 *
 * @package PM Welcome
-* @copyright (c) bb3.mobi 2014 Anvar
+* @copyright BB3.MOBi (c) 2015 Anvar http://apwa.ru
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */
@@ -10,6 +11,9 @@
 namespace apwa\pmwelcome\event;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use phpbb\user;
+use phpbb\config\config;
+use phpbb\config\db_text;
 
 class listener implements EventSubscriberInterface
 {
@@ -28,13 +32,18 @@ class listener implements EventSubscriberInterface
 	/** @var string phpEx */
 	protected $php_ext;
 
-	public function __construct(\phpbb\user $user, \phpbb\config\config $config, \phpbb\config\db_text $config_text, $phpbb_root_path, $php_ext)
+	public function __construct(
+		user $user,
+		config $config,
+		db_text $config_text,
+		$phpbb_root_path, $php_ext
+	)
 	{
-		$this->user = $user;
-		$this->config = $config;
-		$this->text = $config_text;
-		$this->phpbb_root_path = $phpbb_root_path;
-		$this->php_ext = $php_ext;
+		$this->user				= $user;
+		$this->config			= $config;
+		$this->text				= $config_text;
+		$this->phpbb_root_path	= $phpbb_root_path;
+		$this->php_ext			= $php_ext;
 	}
 
 	static public function getSubscribedEvents()
@@ -85,7 +94,7 @@ class listener implements EventSubscriberInterface
 		}
 	}
 
-	/** User PM welcome message */
+	/** User PM Welcome Message */
 	private function user_welcome($user_to, $user_id, $subject, $text)
 	{
 		$m_flags = 3; // 1 is bbcode, 2 is smiles, 4 is urls (add together to turn on more than one)
